@@ -7,12 +7,13 @@ export default function CreateProduct(){
         e.preventDefault();
 
         try{
-            await fetch("http://localhost:3000/api/products", {
+            const data = await fetch("http://localhost:3000/api/products", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(form),
-            }),
-
+            });
+            console.log(data);
+            
             setForm({ name: "", category: "", price: "", code: "", imageUrl:""});
         } catch(err){
             console.log(err);
