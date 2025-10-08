@@ -9,7 +9,7 @@ export default function UpdateUser(){
         e.preventDefault();
 
         try{
-            await fetch("http://localhost:3000/api/users/" + id, {
+            await fetch("https://node-api-beige-gamma.vercel.app/api/users/" + id, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" }, 
                 body:JSON.stringify(form),
@@ -24,7 +24,7 @@ export default function UpdateUser(){
     async function getUser(){
 
         try{
-            const res = await fetch("http://localhost:3000/api/users/"+ id, { 
+            const res = await fetch("https://node-api-beige-gamma.vercel.app/api/users/"+ id, { 
                 method: "GET",
                 headers: { "Content-Type": "application/json" }, 
             });

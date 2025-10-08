@@ -9,7 +9,7 @@ export default function CreateUser(){
         e.preventDefault(); // previne atualizar a pagina, pq se recarregar apaga todas as informacoes
 
         try{
-            await fetch("http://localhost:3000/api/users", {
+            await fetch("https://node-api-beige-gamma.vercel.app/api/users", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form),

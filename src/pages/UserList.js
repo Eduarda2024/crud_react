@@ -15,7 +15,7 @@ export default function UserList() {
     dentro de um componente React, que podem mudar ao longo do tempo sem precisar recarregar a página.*/
     
     function handleDelete(id){
-        axios.delete('http://localhost:3000/api/users/' + id)
+        axios.delete('https://node-api-beige-gamma.vercel.app/api/users/' + id)
         .then((data) =>{
             getUsers()
             alert("Usuario removido com sucesso!")
@@ -24,7 +24,7 @@ export default function UserList() {
 
     }
     function getUsers (){
-        const url = search?'http://localhost:3000/api/users?name='+search:'http://localhost:3000/api/users'
+        const url = search?'https://node-api-beige-gamma.vercel.app/api/users?name='+search:'https://node-api-beige-gamma.vercel.app/api/users'
         axios.get(url)
         .then((data) => {
             setUsers(data.data)

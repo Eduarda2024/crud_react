@@ -8,7 +8,7 @@ export default function UpdateProduct() {
         e.preventDefault();
 
         try{
-            await fetch ("http://localhost:3000/api/products/" + id, {
+            await fetch ("https://node-api-beige-gamma.vercel.app/api/products/" + id, {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body:JSON.stringify(form)
@@ -22,7 +22,7 @@ export default function UpdateProduct() {
     async function getProduct(){
 
         try{
-            const res = await fetch("http://localhost:3000/api/products/" + id, {
+            const res = await fetch("https://node-api-beige-gamma.vercel.app/api/products/" + id, {
                 method: "GET",
                 headers: {"Content-Type": "application/json"},
             });

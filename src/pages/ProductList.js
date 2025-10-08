@@ -15,7 +15,7 @@ export default function ProductList() {
     dentro de um componente React, que podem mudar ao longo do tempo sem precisar recarregar a página.*/
     
     function handleDelete(id){
-        axios.delete('http://localhost:3000/api/products/' + id)
+        axios.delete('https://node-api-beige-gamma.vercel.app/api/products/' + id)
         .then((data) =>{
             getProducts()
             alert("Produto removido com sucesso!")
@@ -24,7 +24,7 @@ export default function ProductList() {
 
     }
     function getProducts (){
-        const url = search?'http://localhost:3000/api/products?name='+search:'http://localhost:3000/api/products'
+        const url = search?'https://node-api-beige-gamma.vercel.app/api/products?name='+search:'https://node-api-beige-gamma.vercel.app/api/products'
         axios.get(url)
         .then((data) => {
             setProducts(data.data)
